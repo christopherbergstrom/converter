@@ -1,20 +1,19 @@
 var select;
 var answer;
 var body;
+var container;
+var innerContainer;
 
 window.onload = function()
 {
   body = document.querySelector("body");
-  select = document.createElement("select");
+  container = document.getElementById("container");
+  select = document.getElementById("topic");
+  innerContainer = document.getElementById("innerContainer");
   // select.setAttribute("onchange", "change()");
-  answer = document.createElement("div");
-  answer.innerHTML="Apple"
-  body.appendChild(select);
-  body.appendChild(answer);
-  populateSelect();
-  select.onchange=change;
+  // select.onchange=change;
   // select.addEventListener("change", change);
-  // console.log("loaded");
+  // populateSelect();
 }
 function populateSelect()
 {
