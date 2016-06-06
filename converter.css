@@ -31,7 +31,7 @@ body
 #topic
 {
   position: relative;
-  margin-top: 2%;
+  margin-top: 6%;
   text-align: center;
   width: 70%;
   left: 15%;
@@ -42,16 +42,21 @@ body
   margin-top: 2%;
   width: 100%;
   height: 80%;
-  border: 1px solid #dcdcdc;
 }
-#leftSpan
+#left
 {
-  /*position: absolute;*/
+  position: absolute;
+  margin-top: 2%;
+  width: 30vw;
+  height: 10vw;
+  left: 15%;
+}
+#leftDiv
+{
   margin-top: 10%;
   text-align: center;
-  width: 10vw;
+  width: 12vw;
   height: 5vw;
-  margin-left: 15%;
   border: 1px solid #dcdcdc;
   display: flex;
   text-align: center;
@@ -60,17 +65,37 @@ body
 }
 #leftSelect
 {
-  /*-webkit-appearance: none;*/
-  /*-webkit-border-radius: 0px;*/
+  width: 12vw;
+  /*display: block;*/
 }
-#rightSpan
+#equal
 {
-  /*position: relative;*/
+  position: absolute;
+  margin-top: 3%;
+  width: 30vw;
+  height: 10vw;
+  left: 20%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 4em;
+  color: #878787;
+}
+#right
+{
+  position: absolute;
+  margin-top: 2%;
+  width: 30vw;
+  height: 10vw;
+  left: 60%;
+}
+#rightDiv
+{
   margin-top: 10%;
   text-align: center;
-  width: 10vw;
+  width: 12vw;
   height: 5vw;
-  margin-left: 30%;
   border: 1px solid #dcdcdc;
   display: flex;
   text-align: center;
@@ -79,6 +104,6 @@ body
 }
 #rightSelect
 {
-  /*-webkit-appearance: none;*/
-  /*-webkit-border-radius: 0px;*/
+  width: 12vw;
+  /*display: block;*/
 }
