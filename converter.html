@@ -5,12 +5,13 @@
   <link rel="icon" href="../images/favicon.ico" type="image/ico" sizes="16x16"/>
   <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="converter.css"/>
-  <script src="converter.js"></script>
+  <script src="js/temp.js"></script>
+  <script src="js/converter.js"></script>
 </head>
 <body>
   <div id="top">Converter</div>
   <div id="container">
-    <select id="topic" class="select" onchange="change()">
+    <select id="topic" class="select" onchange="changeTopic()">
       <option>Area</option>
       <option>Data Transfer Rate</option>
       <option>Digital Storage</option>
@@ -28,12 +29,12 @@
     </select>
     <div id="innerContainer">
       <span id="left">
-        <div id="leftDiv"></div>
+        <input type="text" id="leftIn" onkeydown="changeLeftIn()"></input>
         <select id="leftSelect" class="select"></select>
       </span>
       <span id="equal">=</span>
       <span id="right">
-        <div id="rightDiv"></div>
+        <input type="text" id="rightIn" onkeydown="changeRightIn()"></input>
         <select id="rightSelect" class="select"></select>
       </span>
     </div>

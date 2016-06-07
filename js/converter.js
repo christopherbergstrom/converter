@@ -1,3 +1,4 @@
+var temp = new Temp();
 var topic;
 var body;
 var container;
@@ -37,7 +38,7 @@ window.onload = function()
   // topic.addEventListener("change", change);
   // populateSelect();
 }
-function change()
+function changeTopic()
 {
   if (topic.value === "Area")
     popArea();
@@ -68,6 +69,20 @@ function change()
   else if (topic.value === "Volume")
     popVolume();
 }
+
+function changeLeftIn()
+{
+  // var result = tempc.cToF(leftIn.value);
+  rightIn.value= 1;
+  rightIn.value = temp.cToF(leftIn.value);
+  // var one = leftSelect.value;
+  // var two = rightSelect.value;
+  // onetwo();
+}
+function changeRightIn()
+{
+
+}
 function removeOptions()
 {
   while (leftSelect.firstChild)
@@ -88,49 +103,49 @@ function popArea()
     option.innerHTML="Square kilometer";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Square meter";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Square mile";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Square yard";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Square foot";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Square inch";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Hectare";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Acre";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
   }
 }
@@ -143,79 +158,79 @@ function popDTR()
     option.innerHTML="Bit per second";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Kilo per second";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Kilobyte per second";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Kibibit per second";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Megabit per second";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Megabyte per second";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Mebibit per second";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Gigabit per second";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Gigabyte per second";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Gigibit per second";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Terabit per second";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Terabyte per second";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
     var option = document.createElement("option");
     option.innerHTML="Teribit per second";
     if (i === 0)
       leftSelect.add(option);
-    if (i === 1)
+    else if (i === 1)
       rightSelect.add(option);
   }
 }
@@ -257,7 +272,28 @@ function popSpeed()
 }
 function popTemp()
 {
-  console.log("popTemp");
+  removeOptions();
+  for (var i = 0; i < 2; i++)
+  {
+    var option = document.createElement("option");
+    option.innerHTML="Celcius";
+    if (i === 0)
+      leftSelect.add(option);
+    else if (i === 1)
+      rightSelect.add(option);
+    var option = document.createElement("option");
+    option.innerHTML="Fahrenheit";
+    if (i === 0)
+      leftSelect.add(option);
+    else if (i === 1)
+      rightSelect.add(option);
+    var option = document.createElement("option");
+    option.innerHTML="Kelvin";
+    if (i === 0)
+      leftSelect.add(option);
+    else if (i === 1)
+      rightSelect.add(option);
+  }
 }
 function popTime()
 {
