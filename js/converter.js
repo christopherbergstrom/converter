@@ -72,16 +72,61 @@ function changeTopic()
 
 function changeLeftIn()
 {
-  // var result = tempc.cToF(leftIn.value);
-  rightIn.value= 1;
-  rightIn.value = temp.cToF(leftIn.value);
-  // var one = leftSelect.value;
-  // var two = rightSelect.value;
-  // onetwo();
+  var one = leftSelect.value;
+  var two = rightSelect.value;
+  var num = parseFloat(leftIn.value);
+  if (isNaN(num))
+  {
+    num = 0;
+    leftIn.value = 0;
+  }
+  if (one === "Celcius" && two === "Fahrenheit")
+    rightIn.value = temp.cToF(num);
+  else if (one === "Fahrenheit" && two === "Celcius")
+    rightIn.value = temp.fToC(num);
+  else if (one === "Celcius" && two === "Kelvin")
+    rightIn.value = temp.cToK(num);
+  else if (one === "Kelvin" && two === "Celcius")
+    rightIn.value = temp.kToC(num);
+  else if (one === "Fahrenheit" && two === "Kelvin")
+    rightIn.value = temp.fToK(num);
+  else if (one === "Kelvin" && two === "Fahrenheit")
+    rightIn.value = temp.kToF(num);
+  else if (one === "Fahrenheit" && two === "Fahrenheit")
+    rightIn.value = num;
+  else if (one === "Celcius" && two === "Celcius")
+    rightIn.value = num;
+  else if (one === "Kelvin" && two === "Kelvin")
+    rightIn.value = num;
 }
 function changeRightIn()
 {
-
+  var one = leftSelect.value;
+  var two = rightSelect.value;
+  var num = parseFloat(rightIn.value);
+  if (isNaN(num))
+  {
+    num = 0;
+    rightIn.value = 0;
+  }
+  if (one === "Celcius" && two === "Fahrenheit")
+    leftIn.value = temp.fToC(num);
+  else if (one === "Fahrenheit" && two === "Celcius")
+    leftIn.value = temp.cToF(num);
+  else if (one === "Celcius" && two === "Kelvin")
+    leftIn.value = temp.kToC(num);
+  else if (one === "Kelvin" && two === "Celcius")
+    leftIn.value = temp.cToK(num);
+  else if (one === "Fahrenheit" && two === "Kelvin")
+    leftIn.value = temp.kToF(num);
+  else if (one === "Kelvin" && two === "Fahrenheit")
+    leftIn.value = temp.fToK(num);
+  else if (one === "Fahrenheit" && two === "Fahrenheit")
+    rightIn.value = num;
+  else if (one === "Celcius" && two === "Celcius")
+    rightIn.value = num;
+  else if (one === "Kelvin" && two === "Kelvin")
+    rightIn.value = num;
 }
 function removeOptions()
 {

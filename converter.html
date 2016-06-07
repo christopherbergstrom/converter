@@ -29,13 +29,13 @@
     </select>
     <div id="innerContainer">
       <span id="left">
-        <input type="text" id="leftIn" onkeydown="changeLeftIn()"></input>
-        <select id="leftSelect" class="select"></select>
+        <input type="text" id="leftIn" onkeyup="changeLeftIn()"></input>
+        <select id="leftSelect" class="select" onchange="changeRightIn()"></select>
       </span>
       <span id="equal">=</span>
       <span id="right">
-        <input type="text" id="rightIn" onkeydown="changeRightIn()"></input>
-        <select id="rightSelect" class="select"></select>
+        <input type="text" id="rightIn" onkeyup="changeRightIn()"></input>
+        <select id="rightSelect" class="select" onchange="changeLeftIn()"></select>
       </span>
     </div>
   </div>
