@@ -20,10 +20,6 @@ Temp.prototype.kToC = function(num)
 }
 Temp.prototype.fToK = function(num)
 {
-  console.log(num);
-  console.log(num + 459.67);
-  console.log(5/9);
-  console.log((num + 459.67) * (5/9));
   return (num + 459.67) * (5/9);
 }
 Temp.prototype.kToF = function(num)

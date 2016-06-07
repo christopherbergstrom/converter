@@ -1,4 +1,9 @@
 var temp = new Temp();
+var popArea = new PopArea();
+var popDTR = new PopDTR();
+var popDigitalStorage = new PopDigitalStorage();
+var popEnergy = new PopEnergy();
+var popFrequency = new PopFrequency();
 var topic;
 var body;
 var container;
@@ -6,22 +11,6 @@ var leftDiv;
 var leftSelect;
 var rightDiv;
 var rightSelect;
-
-// var areaLength = ;
-// var areaLength = ;
-// var areaLength = ;
-// var areaLength = ;
-// var areaLength = ;
-// var areaLength = ;
-// var areaLength = ;
-// var areaLength = ;
-// var areaLength = ;
-// var areaLength = ;
-// var areaLength = ;
-// var areaLength = ;
-// var areaLength = ;
-// var areaLength = ;
-
 
 window.onload = function()
 {
@@ -32,7 +21,7 @@ window.onload = function()
   leftSelect = document.getElementById("leftSelect");
   rightDiv = document.getElementById("rightDiv");
   rightSelect = document.getElementById("rightSelect");
-  popArea();
+  popArea.pop();
   // topic.setAttribute("onchange", "change()");
   // topic.onchange=change;
   // topic.addEventListener("change", change);
@@ -41,33 +30,75 @@ window.onload = function()
 function changeTopic()
 {
   if (topic.value === "Area")
-    popArea();
+  {
+    removeOptions();
+    popArea.pop();
+  }
   else if (topic.value === "Data Transfer Rate")
-    popDTR();
+  {
+    removeOptions();
+    popDTR.pop();
+  }
   else if (topic.value === "Digital Storage")
-    popDigitalStorage();
+  {
+    removeOptions();
+    popDigitalStorage.pop();
+  }
   else if (topic.value === "Energy")
-    popEnergy();
+  {
+    removeOptions();
+    popEnergy.pop();
+  }
   else if (topic.value === "Frequency")
-    popFrequency();
+  {
+    removeOptions();
+    popFrequency.pop();
+  }
   else if (topic.value === "Fuel Economy")
-    popFuelEconomy();
+  {
+    removeOptions();
+    popFuelEconomy.pop();
+  }
   else if (topic.value === "Length")
-    popLength();
+  {
+    removeOptions();
+    popLength.pop();
+  }
   else if (topic.value === "Mass")
-    popMass();
+  {
+    removeOptions();
+    popMass.pop();
+  }
   else if (topic.value === "Plane Angle")
-    popPlaneAngle();
+  {
+    removeOptions();
+    popPlaneAngle.pop();
+  }
   else if (topic.value === "Pressure")
-    popPressure();
+  {
+    removeOptions();
+    popPressure.pop();
+  }
   else if (topic.value === "Speed")
-    popSpeed();
+  {
+    removeOptions();
+    popSpeed.pop();
+  }
   else if (topic.value === "Temperature")
-    popTemp();
+  {
+    removeOptions();
+    popTemp.pop();
+  }
   else if (topic.value === "Time")
-    popTime();
+  {
+    removeOptions();
+    popTime.pop();
+  }
   else if (topic.value === "Volume")
-    popVolume();
+  {
+    removeOptions();
+    popVolume.pop();
+  }
 }
 
 function changeLeftIn()
@@ -75,58 +106,66 @@ function changeLeftIn()
   var one = leftSelect.value;
   var two = rightSelect.value;
   var num = parseFloat(leftIn.value);
-  if (isNaN(num))
+  if (num === "")
   {
     num = 0;
-    leftIn.value = 0;
+    leftIn.value = "";
+    rightIn.value = "";
   }
-  if (one === "Celcius" && two === "Fahrenheit")
-    rightIn.value = temp.cToF(num);
-  else if (one === "Fahrenheit" && two === "Celcius")
-    rightIn.value = temp.fToC(num);
-  else if (one === "Celcius" && two === "Kelvin")
-    rightIn.value = temp.cToK(num);
-  else if (one === "Kelvin" && two === "Celcius")
-    rightIn.value = temp.kToC(num);
-  else if (one === "Fahrenheit" && two === "Kelvin")
-    rightIn.value = temp.fToK(num);
-  else if (one === "Kelvin" && two === "Fahrenheit")
-    rightIn.value = temp.kToF(num);
-  else if (one === "Fahrenheit" && two === "Fahrenheit")
-    rightIn.value = num;
-  else if (one === "Celcius" && two === "Celcius")
-    rightIn.value = num;
-  else if (one === "Kelvin" && two === "Kelvin")
-    rightIn.value = num;
+  if (num !== "" && !isNaN(num))
+  {
+    if (one === "Celcius" && two === "Fahrenheit")
+      rightIn.value = temp.cToF(num);
+    else if (one === "Fahrenheit" && two === "Celcius")
+      rightIn.value = temp.fToC(num);
+    else if (one === "Celcius" && two === "Kelvin")
+      rightIn.value = temp.cToK(num);
+    else if (one === "Kelvin" && two === "Celcius")
+      rightIn.value = temp.kToC(num);
+    else if (one === "Fahrenheit" && two === "Kelvin")
+      rightIn.value = temp.fToK(num);
+    else if (one === "Kelvin" && two === "Fahrenheit")
+      rightIn.value = temp.kToF(num);
+    else if (one === "Fahrenheit" && two === "Fahrenheit")
+      rightIn.value = num;
+    else if (one === "Celcius" && two === "Celcius")
+      rightIn.value = num;
+    else if (one === "Kelvin" && two === "Kelvin")
+      rightIn.value = num;
+  }
 }
 function changeRightIn()
 {
   var one = leftSelect.value;
   var two = rightSelect.value;
   var num = parseFloat(rightIn.value);
-  if (isNaN(num))
+  if (num === "")
   {
     num = 0;
-    rightIn.value = 0;
+    leftIn.value = "";
+    rightIn.value = "";
   }
-  if (one === "Celcius" && two === "Fahrenheit")
-    leftIn.value = temp.fToC(num);
-  else if (one === "Fahrenheit" && two === "Celcius")
-    leftIn.value = temp.cToF(num);
-  else if (one === "Celcius" && two === "Kelvin")
-    leftIn.value = temp.kToC(num);
-  else if (one === "Kelvin" && two === "Celcius")
-    leftIn.value = temp.cToK(num);
-  else if (one === "Fahrenheit" && two === "Kelvin")
-    leftIn.value = temp.kToF(num);
-  else if (one === "Kelvin" && two === "Fahrenheit")
-    leftIn.value = temp.fToK(num);
-  else if (one === "Fahrenheit" && two === "Fahrenheit")
-    rightIn.value = num;
-  else if (one === "Celcius" && two === "Celcius")
-    rightIn.value = num;
-  else if (one === "Kelvin" && two === "Kelvin")
-    rightIn.value = num;
+  if (num !== "" && !isNaN(num))
+  {
+    if (one === "Celcius" && two === "Fahrenheit")
+      leftIn.value = temp.fToC(num);
+    else if (one === "Fahrenheit" && two === "Celcius")
+      leftIn.value = temp.cToF(num);
+    else if (one === "Celcius" && two === "Kelvin")
+      leftIn.value = temp.kToC(num);
+    else if (one === "Kelvin" && two === "Celcius")
+      leftIn.value = temp.cToK(num);
+    else if (one === "Fahrenheit" && two === "Kelvin")
+      leftIn.value = temp.kToF(num);
+    else if (one === "Kelvin" && two === "Fahrenheit")
+      leftIn.value = temp.fToK(num);
+    else if (one === "Fahrenheit" && two === "Fahrenheit")
+      rightIn.value = num;
+    else if (one === "Celcius" && two === "Celcius")
+      rightIn.value = num;
+    else if (one === "Kelvin" && two === "Kelvin")
+      rightIn.value = num;
+  }
 }
 function removeOptions()
 {
@@ -137,146 +176,6 @@ function removeOptions()
   while (rightSelect.firstChild)
   {
     rightSelect.removeChild(rightSelect.firstChild);
-  }
-}
-function popArea()
-{
-  removeOptions();
-  for (var i = 0; i < 2; i++)
-  {
-    var option = document.createElement("option");
-    option.innerHTML="Square kilometer";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Square meter";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Square mile";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Square yard";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Square foot";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Square inch";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Hectare";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Acre";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-  }
-}
-function popDTR()
-{
-  removeOptions();
-  for (var i = 0; i < 2; i++)
-  {
-    var option = document.createElement("option");
-    option.innerHTML="Bit per second";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Kilo per second";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Kilobyte per second";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Kibibit per second";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Megabit per second";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Megabyte per second";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Mebibit per second";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Gigabit per second";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Gigabyte per second";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Gigibit per second";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Terabit per second";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Terabyte per second";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Teribit per second";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
   }
 }
 function popDigitalStorage()
