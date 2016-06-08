@@ -2,9 +2,9 @@ var Area = function(){};
 Area.prototype.left = function(one, two, num)
 {
   if (one === "Square kilometer" && two === "Square meter")
-    rightIn.value = area.cToF(num);
-  else if (one === "Fahrenheit" && two === "Celcius")
-    rightIn.value = area.fToC(num);
+    rightIn.value = area.k2Tom2(num);
+  else if (one === "Square meter" && two === "Square kilometer")
+    rightIn.value = area.m2Tok2(num);
   else if (one === "Celcius" && two === "Kelvin")
     rightIn.value = area.cToK(num);
   else if (one === "Kelvin" && two === "Celcius")
