@@ -1,0 +1,1 @@
+var Frequency = function(){};

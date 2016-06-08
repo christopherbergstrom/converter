@@ -1,0 +1,1 @@
+var FuelEconomy = function(){};

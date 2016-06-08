@@ -12,7 +12,20 @@ var popSpeed = new PopSpeed();
 var popTemp = new PopTemp();
 var popTime = new PopTime();
 var popVolume = new PopVolume();
+var area = new Area();
+var dtr = new DTR();
+var digitalStorage = new DigitalStorage();
+var energy = new Energy();
+var frequency = new Frequency();
+var fuelEconomy = new FuelEconomy();
+var length = new Length();
+var mass = new Mass();
+var planeAngle = new PlaneAngle();
+var pressure = new Pressure();
+var speed = new Speed();
 var temp = new Temp();
+var time = new Time();
+var volume = new Volume();
 var topic;
 var body;
 var container;
@@ -125,7 +138,20 @@ function changeLeftIn()
   else if (num !== "" && !isNaN(num))
   {
     // console.log("2: "+num);
+    area.left(one, two, num);
+    dtr.left(one, two, num);
+    digitalStorage.left(one, two, num);
+    energy.left(one, two, num);
+    frequency.left(one, two, num);
+    fuelEconomy.left(one, two, num);
+    length.left(one, two, num);
+    mass.left(one, two, num);
+    planeAngle.left(one, two, num);
+    pressure.left(one, two, num);
+    speed.left(one, two, num);
     temp.left(one, two, num);
+    time.left(one, two, num);
+    volume.left(one, two, num);
   }
 }
 function changeRightIn()
@@ -143,7 +169,20 @@ function changeRightIn()
   else if (num !== "" && !isNaN(num))
   {
     // console.log("2: "+num);
+    area.right(one, two, num);
+    dtr.right(one, two, num);
+    digitalStorage.right(one, two, num);
+    energy.right(one, two, num);
+    frequency.right(one, two, num);
+    fuelEconomy.right(one, two, num);
+    length.right(one, two, num);
+    mass.right(one, two, num);
+    planeAngle.right(one, two, num);
+    pressure.right(one, two, num);
+    speed.right(one, two, num);
     temp.right(one, two, num);
+    time.right(one, two, num);
+    volume.right(one, two, num);
   }
 }
 function removeOptions()
