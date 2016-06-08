@@ -12,7 +12,7 @@ var popSpeed = new PopSpeed();
 var popTemp = new PopTemp();
 var popTime = new PopTime();
 var popVolume = new PopVolume();
-// var temp = new Temp();
+var temp = new Temp();
 var topic;
 var body;
 var container;
@@ -115,32 +115,17 @@ function changeLeftIn()
   var one = leftSelect.value;
   var two = rightSelect.value;
   var num = parseFloat(leftIn.value);
-  if (num === "")
+  if (num === "" || isNaN(num))
   {
+    // console.log("1: "+num);
     num = 0;
     leftIn.value = "";
     rightIn.value = "";
   }
-  if (num !== "" && !isNaN(num))
+  else if (num !== "" && !isNaN(num))
   {
-    if (one === "Celcius" && two === "Fahrenheit")
-      rightIn.value = temp.cToF(num);
-    else if (one === "Fahrenheit" && two === "Celcius")
-      rightIn.value = temp.fToC(num);
-    else if (one === "Celcius" && two === "Kelvin")
-      rightIn.value = temp.cToK(num);
-    else if (one === "Kelvin" && two === "Celcius")
-      rightIn.value = temp.kToC(num);
-    else if (one === "Fahrenheit" && two === "Kelvin")
-      rightIn.value = temp.fToK(num);
-    else if (one === "Kelvin" && two === "Fahrenheit")
-      rightIn.value = temp.kToF(num);
-    else if (one === "Fahrenheit" && two === "Fahrenheit")
-      rightIn.value = num;
-    else if (one === "Celcius" && two === "Celcius")
-      rightIn.value = num;
-    else if (one === "Kelvin" && two === "Kelvin")
-      rightIn.value = num;
+    // console.log("2: "+num);
+    temp.left(one, two, num);
   }
 }
 function changeRightIn()
@@ -148,32 +133,17 @@ function changeRightIn()
   var one = leftSelect.value;
   var two = rightSelect.value;
   var num = parseFloat(rightIn.value);
-  if (num === "")
+  if (num === "" || isNaN(num))
   {
+    // console.log("1: "+num);
     num = 0;
     leftIn.value = "";
     rightIn.value = "";
   }
-  if (num !== "" && !isNaN(num))
+  else if (num !== "" && !isNaN(num))
   {
-    if (one === "Celcius" && two === "Fahrenheit")
-      leftIn.value = temp.fToC(num);
-    else if (one === "Fahrenheit" && two === "Celcius")
-      leftIn.value = temp.cToF(num);
-    else if (one === "Celcius" && two === "Kelvin")
-      leftIn.value = temp.kToC(num);
-    else if (one === "Kelvin" && two === "Celcius")
-      leftIn.value = temp.cToK(num);
-    else if (one === "Fahrenheit" && two === "Kelvin")
-      leftIn.value = temp.kToF(num);
-    else if (one === "Kelvin" && two === "Fahrenheit")
-      leftIn.value = temp.fToK(num);
-    else if (one === "Fahrenheit" && two === "Fahrenheit")
-      rightIn.value = num;
-    else if (one === "Celcius" && two === "Celcius")
-      rightIn.value = num;
-    else if (one === "Kelvin" && two === "Kelvin")
-      rightIn.value = num;
+    // console.log("2: "+num);
+    temp.right(one, two, num);
   }
 }
 function removeOptions()
@@ -186,73 +156,4 @@ function removeOptions()
   {
     rightSelect.removeChild(rightSelect.firstChild);
   }
-}
-function popDigitalStorage()
-{
-  console.log("popDigitalStorage");
-}
-function popEnergy()
-{
-  console.log("popEnergy");
-}
-function popFrequency()
-{
-  console.log("popFrequency");
-}
-function popFuelEconomy()
-{
-  console.log("popFuelEconomy");
-}
-function popLength()
-{
-  console.log("popLength");
-}
-function popMass()
-{
-  console.log("popMass");
-}
-function popPlaneAngle()
-{
-  console.log("popPlaneAngle");
-}
-function popPressure()
-{
-  console.log("popPressure");
-}
-function popSpeed()
-{
-  console.log("popSpeed");
-}
-function popTemp()
-{
-  removeOptions();
-  for (var i = 0; i < 2; i++)
-  {
-    var option = document.createElement("option");
-    option.innerHTML="Celcius";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Fahrenheit";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-    var option = document.createElement("option");
-    option.innerHTML="Kelvin";
-    if (i === 0)
-      leftSelect.add(option);
-    else if (i === 1)
-      rightSelect.add(option);
-  }
-}
-function popTime()
-{
-  console.log("popTime");
-}
-function popVolume()
-{
-  console.log("popVolume");
 }
