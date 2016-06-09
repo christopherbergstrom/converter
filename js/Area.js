@@ -309,19 +309,19 @@ Area.prototype.meterToKm = function(num)
 }
 Area.prototype.meterToMile = function(num)
 {
-  return ;
+  return num * 0.00000038610216;
 }
 Area.prototype.meterToYard = function(num)
 {
-  return ;
+  return num * 1.196;
 }
 Area.prototype.meterToFoot = function(num)
 {
-  return ;
+  return num * 10.764;
 }
 Area.prototype.meterToInch = function(num)
 {
-  return ;
+  return num * 1550;
 }
 Area.prototype.meterToHectare = function(num)
 {
@@ -337,19 +337,19 @@ Area.prototype.mileToKm = function(num)
 }
 Area.prototype.mileToMeter = function(num)
 {
-  return ;
+  return num / 0.00000038610216;
 }
 Area.prototype.mileToYard = function(num)
 {
-  return ;
+  return num * 3097600;
 }
 Area.prototype.mileToFoot = function(num)
 {
-  return ;
+  return num * 27878000;
 }
 Area.prototype.mileToInch = function(num)
 {
-  return ;
+  return num * 4014500000;
 }
 Area.prototype.mileToHectare = function(num)
 {
@@ -365,23 +365,23 @@ Area.prototype.yardToKm = function(num)
 }
 Area.prototype.yardToMeter = function(num)
 {
-  return ;
+  return num / 1.196;
 }
 Area.prototype.yardToMile = function(num)
 {
-  return ;
+  return num / 3097600;
 }
 Area.prototype.yardToFoot = function(num)
 {
-  return ;
+  return num * 9;
 }
 Area.prototype.yardToInch = function(num)
 {
-  return ;
+  return num / 0.0007716;
 }
 Area.prototype.yardToHectare = function(num)
 {
-  return ;
+  return num / 11960;
 }
 Area.prototype.yardToAcre = function(num)
 {
@@ -393,23 +393,23 @@ Area.prototype.footToKm = function(num)
 }
 Area.prototype.footToMeter = function(num)
 {
-  return ;
+  return num / 10.764;
 }
 Area.prototype.footToMile = function(num)
 {
-  return ;
+  return num / 27878000;
 }
 Area.prototype.footToYard = function(num)
 {
-  return ;
+  return num / 9;
 }
 Area.prototype.footToInch = function(num)
 {
-  return ;
+  return num * 144;
 }
 Area.prototype.footToHectare = function(num)
 {
-  return ;
+  return num / 107640;
 }
 Area.prototype.footToAcre = function(num)
 {
@@ -421,23 +421,23 @@ Area.prototype.inchToKm = function(num)
 }
 Area.prototype.inchToMeter = function(num)
 {
-  return ;
+  return num / 1550;
 }
 Area.prototype.inchToMile = function(num)
 {
-  return ;
+  return num / 4014500000;
 }
 Area.prototype.inchToYard = function(num)
 {
-  return ;
+  return num * 0.0007716;
 }
 Area.prototype.inchToFoot = function(num)
 {
-  return ;
+  return num / 144;
 }
 Area.prototype.inchToHectare = function(num)
 {
-  return ;
+  return num / 15500000;
 }
 Area.prototype.inchToAcre = function(num)
 {
@@ -457,15 +457,15 @@ Area.prototype.hectareToMile = function(num)
 }
 Area.prototype.hectareToYard = function(num)
 {
-  return ;
+  return num * 11960;
 }
 Area.prototype.hectareToFoot = function(num)
 {
-  return ;
+  return num * 107640;
 }
 Area.prototype.hectareToInch = function(num)
 {
-  return ;
+  return num * 15500000;
 }
 Area.prototype.hectareToAcre = function(num)
 {
