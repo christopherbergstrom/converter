@@ -2,7 +2,6 @@ body
 {
   /*background-color: black;*/
   font-family: arial;
-
 }
 #top
 {
@@ -10,7 +9,7 @@ body
   top: 0px;
   left: 0px;
   width: 100%;
-  text-align: left;
+  text-align: center;
   font-size: 4em;
   color: black;
 }
