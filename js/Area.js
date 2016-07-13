@@ -4,7 +4,7 @@ Area.prototype.left = function(one, two, num)
   if (one === "Square kilometer" && two === "Square kilometer")
     rightIn.value = num;
   else if (one === "Square kilometer" && two === "Square meter")
-    rightIn.value = area.kmTomMeter(num);
+    rightIn.value = area.kmToMeter(num);
   else if (one === "Square kilometer" && two === "Square mile")
     rightIn.value = area.kmToMile(num);
   else if (one === "Square kilometer" && two === "Square yard")
@@ -157,7 +157,7 @@ Area.prototype.right = function(one, two, num)
     leftIn.value = area.acreToKm(num);
 
   else if (one === "Square meter" && two === "Square kilometer")
-    leftIn.value = area.kmTomMeter(num);
+    leftIn.value = area.kmToMeter(num);
   else if (one === "Square meter" && two === "Square meter")
     leftIn.value = num;
   else if (one === "Square meter" && two === "Square mile")
@@ -275,7 +275,7 @@ Area.prototype.right = function(one, two, num)
   else if (one === "Acre" && two === "Acre")
     leftIn.value = num;
 }
-Area.prototype.kmTomMeter = function(num)
+Area.prototype.kmToMeter = function(num)
 {
   return num * 1000000;
 }

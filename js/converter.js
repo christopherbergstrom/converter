@@ -138,20 +138,62 @@ function changeLeftIn()
   else if (num !== "" && !isNaN(num))
   {
     // console.log("2: "+num);
-    area.left(one, two, num);
-    // dtr.left(one, two, num);
-    // digitalStorage.left(one, two, num);
-    // energy.left(one, two, num);
-    // frequency.left(one, two, num);
-    // fuelEconomy.left(one, two, num);
-    // length.left(one, two, num);
-    // mass.left(one, two, num);
-    // planeAngle.left(one, two, num);
-    // pressure.left(one, two, num);
-    // speed.left(one, two, num);
-    temp.left(one, two, num);
-    // time.left(one, two, num);
-    // volume.left(one, two, num);
+    if (topic.value === "Area")
+    {
+      area.left(one, two, num);
+    }
+    // else if (topic.value === "Data Transfer Rate")
+    // {
+    //   dtr.left(one, two, num);
+    // }
+    // else if (topic.value === "Digital Storage")
+    // {
+    //   digitalStorage.left(one, two, num);
+    // }
+    // else if (topic.value === "Energy")
+    // {
+    //   energy.left(one, two, num);
+    // }
+    else if (topic.value === "Frequency")
+    {
+      frequency.left(one, two, num);
+    }
+    // else if (topic.value === "Fuel Economy")
+    // {
+    //   fuelEconomy.left(one, two, num);
+    // }
+    // else if (topic.value === "Length")
+    // {
+    //   length.left(one, two, num);
+    // }
+    // else if (topic.value === "Mass")
+    // {
+    //   mass.left(one, two, num);
+    // }
+    // else if (topic.value === "Plane Angle")
+    // {
+    //   planeAngle.left(one, two, num);
+    // }
+    // else if (topic.value === "Pressure")
+    // {
+    //   pressure.left(one, two, num);
+    // }
+    // else if (topic.value === "Speed")
+    // {
+    //   speed.left(one, two, num);
+    // }
+    else if (topic.value === "Temperature")
+    {
+      temp.left(one, two, num);
+    }
+    // else if (topic.value === "Time")
+    // {
+    //   time.left(one, two, num);
+    // }
+    // else if (topic.value === "Volume")
+    // {
+    //   volume.left(one, two, num);
+    // }
   }
 }
 function changeRightIn()
@@ -169,20 +211,62 @@ function changeRightIn()
   else if (num !== "" && !isNaN(num))
   {
     // console.log("2: "+num);
-    area.right(one, two, num);
-    // dtr.right(one, two, num);
-    // digitalStorage.right(one, two, num);
-    // energy.right(one, two, num);
-    // frequency.right(one, two, num);
-    // fuelEconomy.right(one, two, num);
-    // length.right(one, two, num);
-    // mass.right(one, two, num);
-    // planeAngle.right(one, two, num);
-    // pressure.right(one, two, num);
-    // speed.right(one, two, num);
-    temp.right(one, two, num);
-    // time.right(one, two, num);
-    // volume.right(one, two, num);
+    if (topic.value === "Area")
+    {
+      area.right(one, two, num);
+    }
+    // else if (topic.value === "Data Transfer Rate")
+    // {
+    //   dtr.right(one, two, num);
+    // }
+    // else if (topic.value === "Digital Storage")
+    // {
+    //   digitalStorage.right(one, two, num);
+    // }
+    // else if (topic.value === "Energy")
+    // {
+    //   energy.right(one, two, num);
+    // }
+    else if (topic.value === "Frequency")
+    {
+      frequency.right(one, two, num);
+    }
+    // else if (topic.value === "Fuel Economy")
+    // {
+    //   fuelEconomy.right(one, two, num);
+    // }
+    // else if (topic.value === "Length")
+    // {
+    //   length.right(one, two, num);
+    // }
+    // else if (topic.value === "Mass")
+    // {
+    //   mass.right(one, two, num);
+    // }
+    // else if (topic.value === "Plane Angle")
+    // {
+    //   planeAngle.right(one, two, num);
+    // }
+    // else if (topic.value === "Pressure")
+    // {
+    //   pressure.right(one, two, num);
+    // }
+    // else if (topic.value === "Speed")
+    // {
+    //   speed.right(one, two, num);
+    // }
+    else if (topic.value === "Temperature")
+    {
+      temp.right(one, two, num);
+    }
+    // else if (topic.value === "Time")
+    // {
+    //   time.right(one, two, num);
+    // }
+    // else if (topic.value === "Volume")
+    // {
+    //   volume.right(one, two, num);
+    // }
   }
 }
 function removeOptions()
