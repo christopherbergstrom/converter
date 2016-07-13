@@ -81,11 +81,11 @@ Frequency.prototype.hToKh = function(num)
 }
 Frequency.prototype.hToMh = function(num)
 {
-  return ;
+  return num / 1000000;
 }
 Frequency.prototype.hToGh = function(num)
 {
-  return ;
+  return num / Math.pow(10,9);
 }
 Frequency.prototype.khToH = function(num)
 {
@@ -93,33 +93,33 @@ Frequency.prototype.khToH = function(num)
 }
 Frequency.prototype.khToMh = function(num)
 {
-  return ;
+  return num / 1000;
 }
 Frequency.prototype.khToGh = function(num)
 {
-  return ;
+  return num / 1000000;
 }
 Frequency.prototype.mhToH = function(num)
 {
-  return ;
+  return num * 1000000;
 }
 Frequency.prototype.mhToKh = function(num)
 {
-  return ;
+  return num * 1000;
 }
 Frequency.prototype.mhToGh = function(num)
 {
-  return ;
+  return num / 1000;
 }
 Frequency.prototype.ghToH = function(num)
 {
-  return ;
+  return num * Math.pow(10,9);
 }
 Frequency.prototype.ghToKh = function(num)
 {
-  return ;
+  return num * 1000000;
 }
 Frequency.prototype.ghToMh = function(num)
 {
-  return ;
+  return num * 1000;
 }
