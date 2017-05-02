@@ -1,1 +1,4 @@
-var Volume = function(){};
+class Volume
+{
+  
+}
