@@ -1,1 +1,4 @@
-var Length = function(){};
+class Length
+{
+  
+}

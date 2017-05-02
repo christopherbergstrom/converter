@@ -1,1 +1,4 @@
-var Energy = function(){};
+class Energy
+{
+  
+}

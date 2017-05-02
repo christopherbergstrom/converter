@@ -1,1 +1,4 @@
-var PlaneAngle = function(){};
+class PlaneAngle
+{
+  
+}

@@ -1,1 +1,4 @@
-var Mass = function(){};
+class Mass
+{
+  
+}

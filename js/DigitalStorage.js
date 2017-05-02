@@ -1,1 +1,4 @@
-var DigitalStorage = function(){};
+class DigitalStorage
+{
+  
+}

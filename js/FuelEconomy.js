@@ -1,1 +1,4 @@
-var FuelEconomy = function(){};
+class FuelEconomy
+{
+  
+}

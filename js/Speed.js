@@ -1,1 +1,4 @@
-var Speed = function(){};
+class Speed
+{
+  
+}

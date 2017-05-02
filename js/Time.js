@@ -1,1 +1,4 @@
-var Time = function(){};
+class Time
+{
+  
+}

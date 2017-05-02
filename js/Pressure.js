@@ -1,1 +1,4 @@
-var Pressure = function(){};
+class Pressure
+{
+  
+}
